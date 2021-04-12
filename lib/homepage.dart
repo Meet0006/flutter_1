@@ -21,8 +21,6 @@ class _HomePageState extends State<HomePage> {
 
   fetchData() async {
     res = await http.get(Uri.parse(api));
-    // res = await http.get(api);
-    // var response = await http.get(Uri.parse(url));
     print(res.body);
     drinks = jsonDecode(res.body)['drinks'];
     print(drinks.toString());
